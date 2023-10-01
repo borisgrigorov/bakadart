@@ -8,12 +8,15 @@ import 'package:bakadart/src/models/marks.dart';
 import 'package:bakadart/src/models/subjects.dart';
 import 'package:bakadart/src/models/timetable.dart';
 import 'package:bakadart/src/models/userInfo.dart';
+import 'package:bakadart/src/schoolList.dart';
 import 'package:http/http.dart' as http;
 
 enum RequestType { get, post, put, delete }
 
 class BakaClient {
   BakaClient(this.baseUrl, {this.loginData});
+
+  SchoolList schoolList = SchoolList();
 
   LoginData? loginData;
   String baseUrl;
